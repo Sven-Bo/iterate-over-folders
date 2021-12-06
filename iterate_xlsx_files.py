@@ -8,7 +8,7 @@ input_dir = Path.cwd() / "Excel_Files"
 parts = []
 for path in list(input_dir.rglob("*.xls*")):
     part = pd.read_excel(path)
-    files.append(part)
+    parts.append(part)
 
 df = pd.concat(parts)
 output_dir = Path.cwd() / "MasterFile"
